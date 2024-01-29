@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DayImage" translatesAutoresizingMaskIntoConstraints="NO" id="UNu-30-dNu">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWv-xe-n18">
+                                <rect key="frame" x="0.0" y="77" width="428" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZQ-Ln-3kC">
+                                <rect key="frame" x="54" y="355" width="320" height="216"/>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Rms-I0-h52">
+                                <rect key="frame" x="0.0" y="762.33333333333337" width="428" height="119.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1P-Ca-2Iz">
+                                        <rect key="frame" x="159.33333333333334" y="0.0" width="109.33333333333334" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Timer"/>
+                                        <connections>
+                                            <action selector="beginTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="waU-qQ-wsG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oe-cb-fUe">
+                                        <rect key="frame" x="151" y="85.333333333333258" width="126.33333333333331" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BWv-xe-n18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Iu-6y-sHQ"/>
+                            <constraint firstItem="UNu-30-dNu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BQg-c7-lLl"/>
+                            <constraint firstItem="BWv-xe-n18" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="DTd-wp-b1y"/>
+                            <constraint firstItem="UNu-30-dNu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="E5m-DN-15y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rms-I0-h52" secondAttribute="bottom" constant="10" id="JKc-6h-zaD"/>
+                            <constraint firstItem="UNu-30-dNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mmc-1U-bd5"/>
+                            <constraint firstAttribute="bottom" secondItem="UNu-30-dNu" secondAttribute="bottom" id="Zzu-tr-aHx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rms-I0-h52" secondAttribute="trailing" id="d5S-DJ-UxK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rms-I0-h52" secondAttribute="trailing" id="mFX-pQ-uuf"/>
+                            <constraint firstItem="vZQ-Ln-3kC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t8O-kR-L5U"/>
+                            <constraint firstItem="vZQ-Ln-3kC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tw3-3g-eS7"/>
+                            <constraint firstItem="Rms-I0-h52" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ucb-OW-9Wl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rms-I0-h52" secondAttribute="bottom" id="veL-cl-FF2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWv-xe-n18" secondAttribute="trailing" id="xSf-15-nAc"/>
+                            <constraint firstItem="Rms-I0-h52" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zl8-qQ-aaq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="UNu-30-dNu" id="YZV-gr-Ni5"/>
+                        <outlet property="currentTimeLabel" destination="BWv-xe-n18" id="LLE-1q-UWz"/>
+                        <outlet property="datePicker" destination="vZQ-Ln-3kC" id="whA-en-4TH"/>
+                        <outlet property="startTimer" destination="R1P-Ca-2Iz" id="CON-rl-olq"/>
+                        <outlet property="timeRemainingLabel" destination="4Oe-cb-fUe" id="10d-bc-NZi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68.691588785046719" y="4.5356371490280782"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DayImage" width="360" height="640"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
